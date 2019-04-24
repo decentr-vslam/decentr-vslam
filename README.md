@@ -58,23 +58,35 @@ catkin build
 
 Please follow the provided instruction to build the [distributed-mapper 'feature/logging' branch ](https://github.com/CogRob/distributed-mapper/tree/feature/logging) in an arbitrary location. The unit tests are not necessary and they may require extra dependencies. You will require the 'runDistributedMapper' executable, and take note of its path location to reference in our system. 
 
-## Installing
+
+### Our Decentralized Visual SLAM System Repository
 
 Clone the repository:
 
 ```
 git clone https://github.com/decentr-vslam/decentr-vslam
-```
+``` 
 
-## Running System Instructions
+## Configure Parameters
 
-### Configuration
-Setup configuration parameters.
+Setup configuration parameters in main.py.
 ```
 distributed_mapper_location='/PATH/runDistributedMapper'
 ```
 
-###
+# 2. Running the System 
+
+Run a process of the verification_request_server from the ROS package:
+```
+../../../../devel/lib/dslam/verification_request_server temp_request.txt temp_result.txt temp_lock.txt
+```
+
+Run the system
+```
+python3 main.py
+```
+
+
 
 ## Acknowledgments
 * Thank you to Maani Ghaffari Jadidi, our course instructor for his support.
