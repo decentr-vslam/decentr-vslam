@@ -59,12 +59,12 @@ Clone the repository:
 ```
 git clone https://github.com/decentr-vslam/decentr-vslam
 ``` 
+Download the [data](https://drive.google.com/drive/folders/13FMYv0bRFj3eGPpzbnmsDGsUBE_OyeG9) to run the experiments. Extract the kitti/ and robotcar_netvlad_feats/ folders inside clone of the repository.
 
 ## Configure Parameters
 
 Setup configuration parameters in main.py.
 ```
-distributed_mapper_location='/PATH/runDistributedMapper'
 ```
 
 # 2. Running the System 
@@ -78,8 +78,6 @@ Run the system
 ```
 python3 main.py
 ```
-
-
 
 ## Acknowledgments
 * Thank you to Maani Ghaffari Jadidi, our course instructor for his support.
