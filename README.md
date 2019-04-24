@@ -65,7 +65,7 @@ Download the [data](https://drive.google.com/drive/folders/13FMYv0bRFj3eGPpzbnms
 
 Due to the amount of data generated, we have provided parameters which dictate if data should be generated or reloaded. Once the system was run once, you can change the following parameters to load the previously generated data. This is found in main.py.
 ```
-#Configure params for generation/loading of data
+# Configure params for generation/loading of data
 # (1) - Generate data (default)
 # (0) - Load previously generated data
 regen_data = 1
