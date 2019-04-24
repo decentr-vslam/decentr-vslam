@@ -1,4 +1,4 @@
-# Data-Efficinet Decentralized Visual SLAM Project
+# Data-Efficient Decentralized Visual SLAM Project
 
 This is a python implementation of a data-efficient approach of Decentralized Visual SLAM. This was implemented by Team 13 (Aishwarya Unnikrishnan, Devesha Tewari, Lu Wen, and Haonan Chang) for the course EECS 568: Mobile Robotics.
 
