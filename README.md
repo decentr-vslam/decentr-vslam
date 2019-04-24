@@ -85,8 +85,14 @@ Run the system
 python3 main.py
 
 ```
+# 3. Make Statics
 
-# 3. DEMO
+If you need to watch the average static error (ATE):
+```
+Use evalAccuracy in static_tool moudule.
+```
+
+# 4. DEMO
 
 ## Decentralized Visual Place Recognition (DVPR):
 ![DVPR](/gifs/DVPR.gif)
