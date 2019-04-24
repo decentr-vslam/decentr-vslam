@@ -2,11 +2,7 @@
 
 This is a python implementation of a data-efficient approach of Decentralized Visual SLAM. This was implemented by Team 13 (Aishwarya Unnikrishnan, Devesha Tewari, Lu Wen, and Haonan Chang) for the course EECS 568: Mobile Robotics.
 
-!! TODO INSERT FINAL RESULT GIF !!
-
-Please refer to our [paper] (!! TODO HERE!!). 
-
-Please refer to our [website](https://decentr-vslam.github.io/Team13_Decentralized-Visual-SLAM/)
+Please refer to our paper and our [website](https://decentr-vslam.github.io/Team13_Decentralized-Visual-SLAM/)
 
 This implementation is based on the paper [Data-Efficient Decentralized Visual SLAM](https://arxiv.org/pdf/1710.05772.pdf) by Titus Cieslewski, Siddharth Choudhary and Davide Scaramuzza.
 
