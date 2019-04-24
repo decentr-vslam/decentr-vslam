@@ -1,27 +1,25 @@
 # Data-Efficient Decentralized Visual SLAM Project
 
-This is a python implementation of a data-efficient approach of Decentralized Visual SLAM. This was implemented by Team 13 (Aishwarya Unnikrishnan, Devesha Tewari, Lu Wen, and Haonan Chang) for the course EECS 568: Mobile Robotics.
+This is a Python implementation of the paper [Data-Efficient Decentralized Visual SLAM](https://arxiv.org/pdf/1710.05772.pdf) by Titus Cieslewski, Siddharth Choudhary and Davide Scaramuzza.
 
-Please refer to our paper and our [website](https://decentr-vslam.github.io/Team13_Decentralized-Visual-SLAM/)
+This was implemented by Team 13 (Aishwarya Unnikrishnan, Devesha Tewari, Lu Wen, and Haonan Chang) for the course EECS 568: Mobile Robotics at University of Michigan. 
 
-This implementation is based on the paper [Data-Efficient Decentralized Visual SLAM](https://arxiv.org/pdf/1710.05772.pdf) by Titus Cieslewski, Siddharth Choudhary and Davide Scaramuzza.
-
-Please refer to our [wiki](https://github.com/decentr-vslam/decentr-vslam/wiki) for further technical information.
+Kindly refer to our report and our [website](https://decentr-vslam.github.io/Team13_Decentralized-Visual-SLAM/), or our [wiki](https://github.com/decentr-vslam/decentr-vslam/wiki) for further technical information.
 
 # 1. Getting Started
 
-You may want to reference our paper before running this code. Please ensure that you have all the listed prerequisites before proceeeding with installation and running the system.
+You may want to reference our report before running the code and ensure that you installed all the listed prerequisites beforehand.
 
 ## Prerequisites:
 
 
 ### ORB-SLAM2
-We use [ORB-SLAM2](https://github.com/raulmur/ORB_SLAM2) for Visual Odometry. Ensure that you have its dependencies (C++11, Pangolin, OpenCV, Eigen3) before installing based on their directions.
+Install [ORB-SLAM2](https://github.com/raulmur/ORB_SLAM2) for Visual Odometry. You must have the following dependencies: C++11, Pangolin, OpenCV, Eigen3.
 
 ### ROS
 
 Install the [ROS ecosystem](http://wiki.ros.org/ROS/Installation). 
-We have tested our system on **Ubuntu 16.04** and **ROS Kinetic**.
+We tested on **Ubuntu 16.04** and **ROS Kinetic**.
 Additionally, install [catkin tools](http://catkin-tools.readthedocs.org/en/latest/installing.html), [vcstool](https://github.com/dirk-thomas/vcstool), OpenCV-nonfree dev, autoconf and libglew-dev.
 
 ```
@@ -51,7 +49,7 @@ catkin build
 
 ### Distributed Trajectory Estimation
 
-Please follow the provided instruction to build the [distributed-mapper 'feature/logging' branch ](https://github.com/CogRob/distributed-mapper/tree/feature/logging) in an arbitrary location. The unit tests are not necessary and they may require extra dependencies. You will require the 'runDistributedMapper' executable, and take note of its path location to reference in our system. 
+Build the [distributed-mapper 'feature/logging' branch ](https://github.com/CogRob/distributed-mapper/tree/feature/logging) in the folder you've cloned the code. The unit tests are not necessary and they may require extra dependencies. You will require the 'runDistributedMapper' executable to run decentralized optimization.
 
 
 ### Our Decentralized Visual SLAM System Repository
@@ -71,9 +69,9 @@ distributed_mapper_location='/PATH/runDistributedMapper'
 
 # 2. Running the System 
 
-Run a process of the verification_request_server from the ROS package:
+Run a process of the verification_request_server from the ROS package in the same folder you're executing the main function from.
 ```
-../../../../devel/lib/dslam/verification_request_server temp_request.txt temp_result.txt temp_lock.txt
+../../<insert your ROS workspace>/devel/lib/dslam/verification_request_server temp_request.txt temp_result.txt temp_lock.txt
 ```
 
 Run the system
@@ -81,7 +79,6 @@ Run the system
 python3 main.py
 ```
 
-All data files used are already included in the repo in the required folders for your convenience. 
 
 
 ## Acknowledgments
