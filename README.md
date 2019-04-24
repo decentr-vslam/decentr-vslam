@@ -94,6 +94,10 @@ Use evalAccuracy in static_tool moudule.
 
 # 4. Checkpoints for Running the Code
 
+## Data is loaded:
+![GenData](/gifs/gendata.gif)
+
+
 ## Decentralized Visual Place Recognition (DVPR):
 ![DVPR](/gifs/DVPR.gif)
 
