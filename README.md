@@ -4,7 +4,7 @@ This is a python implementation of a data-efficient approach of Decentralized Vi
 
 !! TODO INSERT FINAL RESULT GIF !!
 
-Please refer to our [paper](!! TODO HERE!!). 
+Please refer to our [paper] (!! TODO HERE!!). 
 
 Please refer to our [website](https://decentr-vslam.github.io/Team13_Decentralized-Visual-SLAM/)
 
@@ -50,9 +50,6 @@ vcs-import < dslam_open/dependencies.yaml
 # Build:
 catkin build
 ```
-### NetVLAD
-
-!! TODO !!
 
 ### Distributed Trajectory Estimation
 
