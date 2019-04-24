@@ -91,6 +91,9 @@ python3 main.py
 ## Decentralized Visual Place Recognition (DVPR):
 ![DVPR](/gifs/DVPR.gif)
 
+## Relative Pose Estimation (RelPose):
+![RelPose](/gifs/RelPose.gif)
+
 # Acknowledgments
 * Thank you to Maani Ghaffari Jadidi, our course instructor for his support.
 * Thank you to Titus Cieslewski, Siddharth Chourdhary and Davide Scaramuzza who authored the paper ["Data-Efficient Decentralized Visual SLAM"](https://arxiv.org/pdf/1710.05772.pdf), which our work was based on. 
