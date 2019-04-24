@@ -1,0 +1,9 @@
+
+\.idea/
+*.pyc
+.vscode
+.pyc
+*.pkl
+data.pkl
+*.g2o
+*.swp
