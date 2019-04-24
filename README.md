@@ -74,4 +74,4 @@ Example !! TODO !!
 * Thank you to Maani Ghaffari Jadidi, our course instructor for his support.
 * Thank you to Titus Cieslewski, Siddharth Chourdhary and Davide Scaramuzza who authored the paper ["Data-Efficient Decentralized Visual SLAM"](https://arxiv.org/pdf/1710.05772.pdf), which our work was based on. 
 * Thank you to the contributors of the folowing repositories which we utilized in our project:
-    * [distributed-mapper 'feature/logging' branch ] by Siddharth Choudhary, Luca Carlone, Carlos Nieto and John Rogers
+    * [distributed-mapper 'feature/logging' branch ](https://github.com/CogRob/distributed-mapper/tree/feature/logging) by Siddharth Choudhary, Luca Carlone, Carlos Nieto and John Rogers
