@@ -57,29 +57,29 @@ out_file = dpath / 'full_data.mat'   #kitti/00/dslam/full_data.mat
 out_file = dpath / 'full_data.txt'   #kitti/00/dslam/full_data.txt
 #start = time.time()
 if regen_data==1:
-    print("Getting Data")
+    print("Getting KITTI Data")
     data = getData(dataset_path, sequence_id, data_type)
     save_obj(data,'data')
 if regen_data==0:
-    print("Loading Data")
+    print("Getting KITTI Data")
     data = load_obj('data')
 #end = time.time()
 #print(end-start)
 
 if regen_robots==1:
-    print("Getting Robot Data")
+    print("Getting split data for " + str(num_robots) + " robots")
     robots = getRobotData(data, num_robots, overlap)
     save_obj(robots,'robots')
 if regen_robots==0:
-    print("Loading Robot Data")
+    print("Getting split data for " + str(num_robots) + " robots")
     robots = load_obj('robots')
 
 if regen_stream==1:
-    print("Getting Decentralized Stream Data")
+    print("Getting Decentralized Stream Data for all robots")
     decentr_stream = getIndivStream(robots)
     save_obj(decentr_stream,'decentr_stream')
 if regen_stream==0:
-    print("Loading Decentralized Stream Data")
+    print("Getting Decentralized Stream Data for all robots")
     decentr_stream = load_obj('decentr_stream')
 
 #Setup params dict
