@@ -101,7 +101,7 @@ Use evalAccuracy in static_tool moudule.
 ![RelPose](/gifs/RelPose.gif)
 
 ## Decentralized Optimization (DOpt):
-![DOpt](/gifs/DOpt.gif)
+![DOpt](/gifs/dOpt.gif)
 
 # Acknowledgments
 * Thank you to Maani Ghaffari Jadidi, our course instructor for his support.
