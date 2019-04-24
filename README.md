@@ -6,6 +6,8 @@ Please refer to our paper and our [website](https://decentr-vslam.github.io/Team
 
 This implementation is based on the paper [Data-Efficient Decentralized Visual SLAM](https://arxiv.org/pdf/1710.05772.pdf) by Titus Cieslewski, Siddharth Choudhary and Davide Scaramuzza.
 
+Please refer to our [wiki](https://github.com/decentr-vslam/decentr-vslam/wiki) for further technical information.
+
 # 1. Getting Started
 
 You may want to reference our paper before running this code. Please ensure that you have all the listed prerequisites before proceeeding with installation and running the system.
