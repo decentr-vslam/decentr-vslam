@@ -42,7 +42,7 @@ def evalAccuracy(decentr_state, opt_handle, time):
 
     for group_i in range(len(accuracy['optimized_groups'])):
         members = accuracy['optimized_groups'][group_i]['members']
-        [accuracy['optimized_groups'][group_i]['ATE'], decentr_state] = getConnectedAte(decentr_state, members)
+        [accuracy['optimized_groups'][group_i]['num_frames'], accuracy['optimized_groups'][group_i]['ATE'], decentr_state] = getConnectedAte(decentr_state, members)
     
     return [accuracy, decentr_state]
     
@@ -60,43 +60,39 @@ def getConnectedAte(decentr_state, group):
     for g in group:
         if decentr_state[g]['Sim_W_O'].size != 0:
             for sim_o_c in decentr_state[g]['Sim_O_C']:
-                T_gW_C = np.multiply(decentr_state[g]['Sim_W_O'], sim_o_c)
+                T_gW_C = np.matmul(decentr_state[g]['Sim_W_O'], sim_o_c)
                 p_gW_C = np.vstack([p_gW_C, T_gW_C[0:3, 3:4].T])
     
     if p_gW_C.size != 0:
-        [decentr_state[int(group.min())]['T_gt_ate'], connected_ate] = alignTrajs(p_gt_C.T, p_gW_C.T, decentr_state[int(min(group))]['T_gt_ate'])
+        [decentr_state[int(min(group))]['T_gt_O_ate'], connected_ate] = alignTrajs(p_gt_C.T, p_gW_C.T, decentr_state[int(min(group))]['T_gt_O_ate'])
     
     num_frames = p_gW_C.shape[0]
     
+    print(connected_ate)
     return [num_frames, connected_ate, decentr_state]
         
 
 def applyT(init_T, estimate_state):
-    dT = rpyxyzToT(np.vstack[np.arctan2(estimate_state[0:3])/4, estimate_state[3:6]])
-    T_gt_O = np.multiply(dT, init_T)
+    rpyxyz = np.concatenate([np.arctan(estimate_state[0:3])/4.0, estimate_state[3:6]])
+    dT = rpyxyzToT(rpyxyz)
+    T_gt_O = np.matmul(dT, init_T)
     return T_gt_O
 
 
-def alignError(init_T, p_O_C, estim_state):
+def alignError(init_T, p_O_C, p_gt_C, estim_state):
     T_gt_O = applyT(init_T, estim_state)
-    p_gt_C_estim = np.multiply(T_gt_O[0:3, 0:3], p_O_C) + T_gt_O[0:3, 3]
-    alignerror = (p_gt_C_estim.T - p_gt_C_estim.T).reshape([-1, 1])
+    p_gt_C_estim = np.matmul(T_gt_O[0:3, 0:3], p_O_C) + T_gt_O[0:3, 3:4]
+    alignerror = (p_gt_C.T - p_gt_C_estim.T).reshape([-1])
     return alignerror
 
 
 def alignTrajs(p_gt_C, p_O_C, initial_T_gt_O):
-    state = np.hstack([np.zeros(1, 3), initial_T_gt_O[0:3, 3:4].T]).T
+    state = np.hstack([np.zeros([1, 3]), initial_T_gt_O[0:3, 3:4].T]).reshape([-1])
 
-    bound_applyT = functools.partial(applyT, initial_T_gt_O)
-    bound_alignE = functools.partial(alignError, initial_T_gt_O, p_O_C)
-    optim_state = lsq(bound_alignE, state)
-
-    errs = alignError(initial_T_gt_O, p_O_C, optim_state).reshape([3, -1])
-    ate = np.sqrt(np.sum(np.sqaure(errs), axis=0)).mean()
+    bound_alignE = functools.partial(alignError, initial_T_gt_O, p_O_C, p_gt_C)
+    optim_state = lsq(bound_alignE, state).x
+    print(optim_state)
+    errs = bound_alignE(optim_state).reshape([3, -1])
+    ate = np.sqrt(np.sum(np.square(errs), axis=0)).mean()
     optim_T_gt_O = applyT(initial_T_gt_O, optim_state)
     return [optim_T_gt_O, ate]
-
-
-
-
-    
