@@ -79,6 +79,7 @@ Run the system
 python3 main.py
 ```
 
+All data files used are already included in the repo in the required folders for your convenience. 
 
 
 ## Acknowledgments
