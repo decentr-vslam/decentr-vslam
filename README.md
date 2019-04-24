@@ -4,7 +4,7 @@ This is a Python implementation of the paper [Data-Efficient Decentralized Visua
 
 This was implemented by Team 13 (Aishwarya Unnikrishnan, Devesha Tewari, Lu Wen, and Haonan Chang) for the course EECS 568: Mobile Robotics at University of Michigan. 
 
-Kindly refer to our [report](https://github.com/decentr-vslam/Team13_Decentralized-Visual-SLAM/blob/master/Paper.pdf) and our [website](https://decentr-vslam.github.io/Team13_Decentralized-Visual-SLAM/), or our [wiki](https://github.com/decentr-vslam/decentr-vslam/wiki) for further technical information.
+Kindly refer to our [report](https://github.com/decentr-vslam/Team13_Decentralized-Visual-SLAM/blob/master/Paper.pdf) and our [website](https://decentr-vslam.github.io/Team13_Decentralized-Visual-SLAM/). See our [wiki](https://github.com/decentr-vslam/decentr-vslam/wiki) for further technical troubleshooting issues.
 
 # 1. Getting Started
 
