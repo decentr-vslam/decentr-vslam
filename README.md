@@ -92,13 +92,16 @@ If you need to watch the average static error (ATE):
 Use evalAccuracy in static_tool moudule.
 ```
 
-# 4. DEMO
+# 4. Checkpoints for Running the Code
 
 ## Decentralized Visual Place Recognition (DVPR):
 ![DVPR](/gifs/DVPR.gif)
 
 ## Relative Pose Estimation (RelPose):
 ![RelPose](/gifs/RelPose.gif)
+
+## Decentralized Optimization (DOpt):
+![DOpt](/gifs/DOpt.gif)
 
 # Acknowledgments
 * Thank you to Maani Ghaffari Jadidi, our course instructor for his support.
