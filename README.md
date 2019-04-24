@@ -10,17 +10,17 @@ Please refer to our [website](https://decentr-vslam.github.io/Team13_Decentraliz
 
 This implementation is based on the paper [Data-Efficient Decentralized Visual SLAM](https://arxiv.org/pdf/1710.05772.pdf) by Titus Cieslewski, Siddharth Choudhary and Davide Scaramuzza.
 
-## Getting Started
+# 1. Getting Started
 
 You may want to reference our paper before running this code. Please ensure that you have all the listed prerequisites before proceeeding with installation and running the system.
 
-### Prerequisites:
+## Prerequisites:
 
 
-#### ORB-SLAM2
+### ORB-SLAM2
 We use [ORB-SLAM2](https://github.com/raulmur/ORB_SLAM2) for Visual Odometry. Ensure that you have its dependencies (C++11, Pangolin, OpenCV, Eigen3) before installing based on their directions.
 
-#### ROS
+### ROS
 
 Install the [ROS ecosystem](http://wiki.ros.org/ROS/Installation). 
 We have tested our system on **Ubuntu 16.04** and **ROS Kinetic**.
@@ -31,7 +31,7 @@ sudo add-apt-repository --yes ppa:xqms/opencv-nonfree
 sudo apt-get update
 sudo apt-get install python-catkin-tools python-vcstool libopencv-nonfree-dev autoconf libglew-dev
 ```
-#### ROS dslam package
+### ROS DSLAM package
 This implementation uses the ROS services to be running with our code. After installing ROS, execute the following: 
 
 ```
@@ -50,25 +50,31 @@ vcs-import < dslam_open/dependencies.yaml
 # Build:
 catkin build
 ```
-#### NetVLAD
+### NetVLAD
 
 !! TODO !!
 
-#### Distributed Trajectory Estimation
+### Distributed Trajectory Estimation
 
 Please follow the provided instruction to build the [distributed-mapper 'feature/logging' branch ](https://github.com/CogRob/distributed-mapper/tree/feature/logging) in an arbitrary location. The unit tests are not necessary and they may require extra dependencies. You will require the 'runDistributedMapper' executable, and take note of its path location to reference in our system. 
 
-### Installing
+## Installing
 
-!! TODO !!
+Clone the repository:
 
-## Running Sample
-
-!! TODO !!
 ```
-Example !! TODO !!
+git clone https://github.com/decentr-vslam/decentr-vslam
 ```
 
+## Running System Instructions
+
+### Configuration
+Setup configuration parameters.
+```
+distributed_mapper_location='/PATH/runDistributedMapper'
+```
+
+###
 
 ## Acknowledgments
 * Thank you to Maani Ghaffari Jadidi, our course instructor for his support.
