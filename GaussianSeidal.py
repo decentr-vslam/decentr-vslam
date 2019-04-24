@@ -5,7 +5,7 @@ from writeG2oFile import writeDecentrStateToG2oFiles
 import IPython
 import pandas as pd
 import numpy as np
-
+import time
 def runSyncGaussSeidal(update_state, distributed_mapper_location, group_idx, group_reindexing,  max_iters):
     outputDir = "dgs_data/{}".format(group_idx)
     if not os.path.exists(outputDir):
@@ -17,6 +17,8 @@ def runSyncGaussSeidal(update_state, distributed_mapper_location, group_idx, gro
     os.system("{} --dataDir {}/{}/ --nrRobots {} --traceFile {}/{}/trace --maxIter {}".format(\
         distributed_mapper_location, current_path, outputDir, len(update_state), current_path, outputDir,\
         max_iters))
+
+    print ("Obtained optimized .g2o files from DOPt!")
     
     # read data back from file
     update_state = readDecentrStateFromOptG2oFiles(outputDir, update_state, '_optimized')

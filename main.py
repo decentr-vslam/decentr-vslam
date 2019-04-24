@@ -33,9 +33,9 @@ def load_obj(name ):
         return pickle.load(f)
 
 #Config
-regen_data = 1
-regen_robots = 1
-regen_stream = 1
+regen_data = 0
+regen_robots = 0
+regen_stream = 0
 
 dataset_path = 'kitti'
 sequence_id = '00'
@@ -101,7 +101,6 @@ distributed_mapper_location=os.getcwd()+'/distributed-mapper/cpp/build/runDistri
 #run sim
 decentr_state = initDecentrState(num_robots,robots)
 decentr_state = assignCC(robcar_path,decentr_state,params)
-
 real_time = time.time()
 netvlad_match_stats = dict()
 data_increment = dict()

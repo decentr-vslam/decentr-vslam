@@ -12,6 +12,8 @@ def vec(v):
     
 def simulateDV(decentr_state, match_robot_i, match_frame_i, query_robot_i, query_frame_i, params):
 
+    print ("Making verification request for relative pose between robot" + str(match_robot_i) + " and robot " + str(query_robot_i))
+
     N=len(decentr_state)
     gv_increment = np.zeros((N,N))
 
@@ -45,8 +47,9 @@ def simulateDV(decentr_state, match_robot_i, match_frame_i, query_robot_i, query
 
         return decentr_state, gv_increment
 
-    Sim_M_Q = verification_result[5:].reshape(4,4)
-
+    Sim_M_Q = verification_result[5:].reshape(4,4).T
+    print (Sim_M_Q, "is the transformation found!")
+    
     match=dict()
     match["robot_i"] = match_robot_i
     match["frame_i"] = match_frame_i
