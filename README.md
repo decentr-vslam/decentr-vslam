@@ -6,7 +6,7 @@ This is a python implementation of a data-efficient approach of Decentralized Vi
 
 Please refer to our [paper](!! TODO HERE!!). 
 
-Please refer to our Git Wiki for more details. 
+Please refer to our [website](https://decentr-vslam.github.io/Team13_Decentralized-Visual-SLAM/)
 
 This implementation is based on the paper [Data-Efficient Decentralized Visual SLAM](https://arxiv.org/pdf/1710.05772.pdf) by Titus Cieslewski, Siddharth Choudhary and Davide Scaramuzza.
 
