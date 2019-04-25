@@ -61,6 +61,15 @@ git clone https://github.com/decentr-vslam/decentr-vslam
 ``` 
 Download the [data](https://drive.google.com/drive/folders/13FMYv0bRFj3eGPpzbnmsDGsUBE_OyeG9) to run the experiments. Extract the kitti/ and robotcar_netvlad_feats/ folders inside clone of the repository.
 
+
+## Generate NetVLAD descriptors
+
+You can simply download the [NetVLAD descriptors]() on KITTI dataset and use it for simulation.
+
+If you want to generate NetVLAD descriptors for other dataset, we also provide with the codes. 
+
+First, download the well-trained [checkpoint](). Put the ```checkpoint``` folder under the same folder of NetVLAD. Then run the file ```getNetVLAD.py``` to generate a ```.json``` file of netvlad descriptors.
+
 ## Configure Parameters
 
 Due to the amount of data generated, we have provided parameters which dictate if data should be generated or reloaded. Once the system was run once, you can change the following parameters to load the previously generated data. This is found in main.py.
