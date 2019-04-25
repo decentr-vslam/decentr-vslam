@@ -64,11 +64,11 @@ Download the [data](https://drive.google.com/drive/folders/13FMYv0bRFj3eGPpzbnms
 
 ## Generate NetVLAD descriptors
 
-You can simply download the [NetVLAD descriptors]() on KITTI dataset and use it for simulation.
+You can simply download the [NetVLAD descriptors](https://drive.google.com/open?id=1_JrwkJS9EcG4KOkXQfEB_Zzcyfrj3x0o) on KITTI dataset and use it for simulation.
 
 If you want to generate NetVLAD descriptors for other dataset, we also provide with the codes. 
 
-First, download the well-trained [checkpoint](). Put the ```checkpoint``` folder under the same folder of NetVLAD. Then run the file ```getNetVLAD.py``` to generate a ```.json``` file of netvlad descriptors.
+First, download the well-trained [checkpoint](https://drive.google.com/file/d/1ynkQKhzvgK5pkyjwjkwUE44dvUq4B1EQ/view?usp=sharing). Put the ```checkpoint``` folder under the same folder of NetVLAD. Then run the file ```getNetVLAD.py``` to generate a ```.json``` file of netvlad descriptors.
 
 ## Configure Parameters
 
